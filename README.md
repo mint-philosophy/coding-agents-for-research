@@ -1,4 +1,4 @@
-# Coding Agents for Research
+# AI Agents for Philosophy
 
 Some first steps in using agents for philosophical research—or really, any knowledge work that doesn't involve traditional programming.
 
