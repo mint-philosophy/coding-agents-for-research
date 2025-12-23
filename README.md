@@ -1,6 +1,6 @@
 # Coding Agents for Research
 
-A practitioner's guide to using AI coding agents for philosophy and philosophy-adjacent research—or really, any knowledge work that doesn't involve traditional programming.
+Some first steps in using agents for philosophical research—or really, any knowledge work that doesn't involve traditional programming.
 
 ## What's Here
 

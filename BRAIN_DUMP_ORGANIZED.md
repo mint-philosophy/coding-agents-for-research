@@ -1,6 +1,6 @@
 # Coding Agents for Philosophy Research
 
-**A practitioner's account of using AI coding agents for non-coding work**
+**Some first steps in using agents for philosophical research**
 
 ---
 
