@@ -9,18 +9,17 @@
 1. [The Core Insight](#the-core-insight)
 2. [Gateway Drug: MacOS Fixes](#gateway-drug-macos-fixes)
 3. [Linux Liberation](#linux-liberation)
-4. [Practical Applications](#practical-applications)
-5. [The Context Engineering Problem](#the-context-engineering-problem)
-6. [Project Structure](#project-structure)
-7. [Initialization Protocol](#initialization-protocol)
-8. [Session Management](#session-management)
-9. [Skills System](#skills-system)
-10. [What Agents Do For Me Now](#what-agents-do-for-me-now)
-11. [Parallel Agents and Research at Scale](#parallel-agents-and-research-at-scale)
-12. [Security Considerations](#security-considerations)
-13. [Model Preferences](#model-preferences)
-14. [Remote Access](#remote-access)
-15. [Resources](#resources)
+4. [The Context Engineering Problem](#the-context-engineering-problem)
+5. [Project Structure](#project-structure)
+6. [Initialization Protocol](#initialization-protocol)
+7. [Session Management](#session-management)
+8. [Skills System](#skills-system)
+9. [What Agents Do For Me Now](#what-agents-do-for-me-now)
+10. [Parallel Agents and Research at Scale](#parallel-agents-and-research-at-scale)
+11. [Security Considerations](#security-considerations)
+12. [Model Preferences](#model-preferences)
+13. [Remote Access](#remote-access)
+14. [Resources](#resources)
 
 ---
 
@@ -49,12 +48,6 @@ The next step was setting up a new Linux system. I bought an Alienware with an R
 Linux has always felt inaccessible to me. The terminal commands, the configuration files, the dependency chains—it was a world I barely understood conceptually and definitely couldn't navigate practically. Claude Code changed that. I got the keyboard structured to feel like using a Mac, with all the same muscle memory and shortcuts. I installed, auditioned, and deleted applications rapidly, experimenting with alternatives in ways that would have been too tedious before. I changed the look, tweaked the behavior, and made it robust and unconstrained.
 
 The most excessive project was building system-wide autocorrect running Qwen 3B on the GPU. This is complete overkill—a 3-billion parameter model for spell-checking—but it's a massive improvement over Espanso, which I found really frustrating to use (I tried a bunch of others too). More importantly, I love the fact that I have complete digital autonomy on this machine. No bossware, no telemetry I didn't consent to, maximal customization ability. I couldn't really justify the time I spent getting all this done (I have a couple of perfectly serviceable macs, that I can work fine on), but it was really fun, and it gave me some hope that I can maintain digital autonomy even as the primary operating systems become ever more locked down, even at the BIOS level. 
-
----
-
-## Practical Applications
-
-The practical applications quickly became more serious. I'm involved in faculty hiring at JHU, and we have over 2000 candidates to review. I needed to identify candidates with AI-related research interests. All it took was a python script to search for regular expressions and put the results into a spreadsheet, but that was definitely beyond my coding ability. Claude nailed it (and note: everything was processed locally, using the script on my machine; nothing was passed to the server). And the script was deterministic, which meant I could be confident there were no false negatives—anyone with relevant keywords in their materials would be caught. What would have taken days of manual review took minutes to run and produced a clean list I could work through systematically.
 
 ---
 
