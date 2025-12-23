@@ -174,7 +174,7 @@ My next side-project for the new year is making this hands-free—being able to 
 
 ## Resources
 
-Several recent resources have been particularly useful in thinking about this workflow. Steve Newman's writing on hyperproductivity captures much of the opportunity I've been exploring. ([Link](https://secondthoughts.ai/p/hyperproductivity)) Zhiming Lu's work on context engineering provides a more systematic framework for thinking about how to give agents the context they need. ([Link](https://ssrn.com/abstract=5403981)) Kirk et al.'s paper on Human Context Protocol addresses the problem of making human preferences and context legible to agents at scale. ([Link](https://www.arxiv.org/abs/2512.05470))
+Several recent resources have been particularly useful in thinking about this workflow. Steve Newman's writing on hyperproductivity captures much of the opportunity I've been exploring. ([Link](https://secondthoughts.ai/p/hyperproductivity)) Xu et al.'s work on context engineering provides a more systematic framework for thinking about how to give agents the context they need. ([Link](https://arxiv.org/abs/2512.05470)) Shah et al.'s paper on Human Context Protocol addresses the problem of making human preferences and context legible to agents at scale. ([Link](https://ssrn.com/abstract=5403981))
 
 I've cobbled this all together myself, so I'm curious to see other approaches and ways to make things more effective or efficient. I'm not drawing broader lessons here—just sharing what has worked and what hasn't, so that others can try something similar.
 

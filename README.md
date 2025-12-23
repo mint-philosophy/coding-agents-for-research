@@ -49,8 +49,8 @@ artifacts/
 ## Resources
 
 - [Steve Newman on Hyperproductivity](https://secondthoughts.ai/p/hyperproductivity)
-- [Zhiming Lu on Context Engineering](https://ssrn.com/abstract=5403981)
-- [Kirk et al. on Human Context Protocol](https://arxiv.org/abs/2512.05470)
+- [Xu et al. on Context Engineering](https://arxiv.org/abs/2512.05470)
+- [Shah et al. on Human Context Protocol](https://ssrn.com/abstract=5403981)
 
 ## Adapting This
 
