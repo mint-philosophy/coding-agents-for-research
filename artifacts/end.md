@@ -57,7 +57,16 @@ description: Agent session closure protocol - document work, merge logs, archive
   ```
   If files still exist → delete manually
 
-### 5. Confirm
+### 5. Skill Check
+
+- ☐ Review what you did this session
+- ☐ Ask: "Is there a reusable pattern here that future agents should know?"
+- ☐ If yes → create skill in `.cursor/skills/[name]/SKILL.md` using template
+- ☐ Register new skill in `init.md` under "Registered Skills"
+
+**Save as skill if**: Reusable? Future benefit? Clearly documentable? (2+ yes = save)
+
+### 6. Confirm
 
 - ☐ Files exist in `sessions/completed/`
 - ☐ Files GONE from `sessions/active/`
