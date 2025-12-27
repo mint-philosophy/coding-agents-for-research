@@ -7,9 +7,9 @@
 ## Contents
 
 1. [The Core Insight](#the-core-insight)
-2. [Gateway Drug: MacOS Fixes](#gateway-drug-macos-fixes)
-3. [Linux Liberation](#linux-liberation)
-4. [The Context Engineering Problem](#the-context-engineering-problem)
+2. [First Steps: MacOS Fixes](#first-steps-macos-fixes)
+3. [Linux](#linux)
+4. [Context Engineering](#context-engineering)
 5. [Project Structure](#project-structure)
 6. [Initialization Protocol](#initialization-protocol)
 7. [Session Management](#session-management)
@@ -31,7 +31,7 @@ Coding agents have the potential to make me dramatically more productive, not by
 
 ---
 
-## Gateway Drug: MacOS Fixes
+## First Steps: MacOS Fixes
 
 My entry point was trivial annoyances. Paste always inheriting formatting when I wanted plain text. Typo corrections requiring individual clicks when I wanted to accept them all at once and in general I hate going between keyboard and mouse. These are small things, but they compound. I asked Claude to figure out how to make "paste without formatting" the default behavior system-wide, and it worked. I asked for a keyboard shortcut that would accept all spelling corrections in the preceding paragraph, and that worked too.
 
@@ -41,7 +41,7 @@ Each of these small victories revealed the same pattern: tasks that seemed to re
 
 ---
 
-## Linux Liberation
+## Linux
 
 The next step was setting up a new Linux system. I bought an Alienware with an RTX 5090 because I wanted serious GPU horsepower for local inference, but it came with Windows. Using coding agents on Windows still isn't great, and Windows itself is increasingly hostile to users, so I installed Fedora 43 and basically used Claude to configure everything.
 
@@ -51,7 +51,7 @@ The most excessive project was building system-wide autocorrect running Qwen 3B 
 
 ---
 
-## The Context Engineering Problem
+## Context Engineering
 
 The problem with CLI agents, though, is that it's easy to fall into a pattern where you don't cumulatively build from one conversation to the next. Each time you launch a new agent, you're basically starting fresh. Without careful attention, Claude might just rebuild something you've already set up, or reinvent a wheel you've already invented. There's no institutional memory (this is something lots of folks have talked about at length—I think Dwarkesh most influentially).
 
