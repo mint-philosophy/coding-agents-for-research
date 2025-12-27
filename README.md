@@ -1,71 +1,183 @@
-# AI Agents for Philosophy
+# Agent Workspace
 
-Some first steps in using agents for philosophical research—or really, any knowledge work that doesn't involve traditional programming.
+A deployable template for working with AI coding agents (Claude, Cursor, etc.) on research and knowledge work.
 
-## What's Here
+**[Read the guide →](docs/guide.md)** | **[Agent ideas →](docs/agent-ideas.md)** | **[Recent updates →](docs/updates.md)**
 
-This repository contains documentation and configuration files from my experience using coding agents (primarily Claude in Cursor and Claude Code) for research tasks. The focus is practical: what worked, what didn't, and artifacts you can adapt for your own workflow.
-
-**[Read the full post →](BRAIN_DUMP_ORGANIZED.md)**
+---
 
 ## Quick Start
 
-The most valuable artifacts, in order:
+```bash
+# Clone this repo
+git clone https://github.com/yourusername/agent-workspace.git
+cd agent-workspace
 
-1. **[init.md](artifacts/init.md)** — The initialization prompt that tells agents how to work. Start here.
-2. **[end.md](artifacts/end.md)** — Session closure protocol for continuity across agents.
-3. **[SKILL_TEMPLATE.md](artifacts/SKILL_TEMPLATE.md)** — How to document reusable capabilities.
+# Open in Cursor or run with Claude Code
+cursor .
+# or
+claude
 
-## Artifacts
+# Run the setup wizard
+/setup
+```
+
+The `/setup` command walks you through configuration. Or do it manually — see [Configuration](#configuration) below.
+
+## What's Here
 
 ```
-artifacts/
-├── init.md                    # Agent initialization protocol
-├── end.md                     # Session closure protocol
-├── SKILL_TEMPLATE.md          # Template for new skills
-├── example-session-log.md     # What session logs look like
-├── example-news-summary.md    # Example of agent-generated output
-└── skills/
-    ├── notion-tasks.md        # Notion API integration
-    ├── canvas-sync.md         # Slack canvas synchronization
-    └── context-loading.md     # Loading context for writing tasks
+agent-workspace/
+├── .cursor/
+│   ├── commands/          # Slash commands (/init, /end, /setup, etc.)
+│   └── skills/            # Reusable capabilities
+│
+├── .claude/
+│   ├── settings.json      # Hook configuration for Claude Code CLI
+│   └── hooks/             # Lifecycle hooks (context-threshold, etc.)
+│
+├── projects/              # Collaborative research projects
+│   ├── collab-1/          # Template with README, LOG, TODO
+│   └── collab-2/
+│
+├── side-projects/         # Personal experiments
+│   └── side-proj-1/
+│
+├── corpus/                # Research by others (papers, readings)
+├── publications/          # Your published writing
+├── research-essays/       # Non-project writing, explorations
+├── grants/                # Grant applications, admin
+│
+├── local-repos/           # Git clones (gitignored)
+├── scripts/               # Global automation
+│
+├── sessions/              # Agent session logs
+│   ├── active/
+│   ├── completed/
+│   └── SESSION_TEMPLATE.md
+│
+├── docs/
+│   ├── guide.md           # Full documentation
+│   └── updates.md         # Changelog
+│
+├── CLAUDE.md              # Claude Code workspace instructions
+└── README.md              # This file
 ```
 
 ## Key Concepts
 
-**Context Engineering**: The problem of giving agents enough context to be useful without overwhelming their context window. Solved through directory structure, documentation protocol (README/LOG/TODO per project), and initialization prompts.
+### The Documentation Triad
 
-**Session Management**: Each agent is a temp worker. Session logs track what happened; `/end` commands ensure handoff documentation.
+Every project has three files:
+- **README.md** — Static goals, who's involved, research questions
+- **LOG.md** — Session history, decisions made, what happened
+- **TODO.md** — Immediate next steps
 
-**Skills**: Reusable patterns that agents can draw on instead of reinventing the wheel. Each skill includes scripts, API patterns, and clear recipes.
+Agents read these on startup to understand project state.
 
-## Tools Mentioned
+### Session Management
 
-- **[Cursor](https://cursor.sh)** — IDE with agent integration. Good for multi-project work.
-- **[Claude Code](https://anthropic.com)** — CLI agent. Best for hard tasks.
-- **[Imbue Sculptor](https://imbue.com)** — Agent forking. Unique for parallelization.
-- **[Tailscale](https://tailscale.com)** + **[Termius](https://termius.com)** — Remote access from phone.
+Agents are temp workers with ~200k token memory. The `/init` and `/end` commands ensure:
+- Each session creates logs (`sessions/active/`)
+- Work is documented before session ends
+- Handoff notes enable the next agent to continue
+
+### Skills System
+
+Skills are reusable patterns in `.cursor/skills/`. Instead of re-explaining how to post to Slack or create Notion tasks, agents load the relevant skill.
+
+### Hooks (Claude Code)
+
+Lifecycle hooks in `.claude/hooks/` run automatically. The included `context-threshold.py` warns when context usage hits 90%, prompting the agent to wrap up.
+
+## Setup
+
+### Guided Setup
+
+Run `/setup` in the agent chat — the agent will walk you through configuration.
+
+### Manual Setup
+
+**For Cursor Users:**
+1. Open this folder in Cursor
+2. Edit `.cursor/commands/init.md` with your details
+3. Run `/init` to start
+
+**For Claude Code Users:**
+1. Navigate to this folder in terminal
+2. Run `claude` to start
+3. Edit `.cursor/commands/init.md` with your details
+4. Run `/init` to start
+
+### Configuration
+
+**Required edits in `.cursor/commands/init.md`:**
+- `[Agent Name]` → Your agent's name (e.g., "Jarvis", "Friday")
+- `[Your Workspace]` → Your workspace description
+- `[user]` → Your name
+- `[Your timezone]` → Your timezone
+
+**API Keys** (for skills that need them):
+```bash
+# Create .cursor/.api_keys.txt (gitignored)
+NOTION_API_KEY=secret_xxx
+SLACK_BOT_TOKEN=xoxb-xxx
+```
+
+## Customization
+
+### Adding Projects
+
+```bash
+cp -r projects/collab-1 projects/my-new-project
+# Edit the README.md, LOG.md, TODO.md
+```
+
+### Adding Skills
+
+```bash
+mkdir .cursor/skills/my-skill
+cp .cursor/skills/SKILL_TEMPLATE.md .cursor/skills/my-skill/SKILL.md
+# Follow the template structure
+# Register in init.md under "Registered Skills"
+```
+
+### Adding Commands
+
+Create `.cursor/commands/my-command.md` following the init.md structure.
+
+## Tools
+
+- **[Cursor](https://cursor.sh)** — IDE with agent integration
+- **[Claude Code](https://docs.anthropic.com/en/docs/claude-code)** — CLI agent from Anthropic
+- **[Imbue Sculptor](https://sculptor.imbue.com)** — Agent forking for parallelization
 
 ## Resources
 
-- [Steve Newman on Hyperproductivity](https://secondthoughts.ai/p/hyperproductivity)
-- [Xu et al. on Context Engineering](https://arxiv.org/abs/2512.05470)
-- [Shah et al. on Human Context Protocol](https://ssrn.com/abstract=5403981)
+*This section is a living document — we add sources as we find useful ideas. See the `self-improvement` skill for our protocol.*
 
-## Adapting This
+### Conceptual Foundations
 
-The artifacts here are sanitized—IDs, paths, and credentials replaced with placeholders. To use them:
+- [Steve Newman on Hyperproductivity](https://secondthoughts.ai/p/hyperproductivity) — The case for agents in knowledge work
+- [Xu et al. on Context Engineering](https://arxiv.org/abs/2512.05470) — Systematic approach to agent context
+- [Shah et al. on Human Context Protocol](https://ssrn.com/abstract=5403981) — Providing human context to agents
 
-1. Copy the `artifacts/` folder to your workspace
-2. Replace placeholders like `[Your Projects]`, `YOUR_DATABASE_ID`, `C0XXXXXXXXX`
-3. Adjust paths to match your directory structure
-4. Add your own skills as you develop them
+### Agent Architecture
+
+- [ARTEMIS (arXiv:2512.09108)](https://arxiv.org/abs/2512.09108) — Measure outcomes → identify patterns → refine configurations
+- [Anthropic Agent Skills](https://github.com/anthropics/agent-skills) — Context degradation patterns (lost-in-middle, poisoning, distraction, clash)
+
+### Workflow Repos
+
+- [cursor.directory](https://cursor.directory/) — Community cursor rules collection
+
+*Found something useful? Add it here and credit the source.*
 
 ## About
 
-I'm Seth Lazar, a philosopher working on AI ethics and normative computing. This grew out of running [MINT Lab](https://github.com/mint-research) where we use agents extensively for research coordination.
+Created by [Seth Lazar](https://twitter.com/sethlazar), philosopher working on AI ethics at [MINT Lab](https://github.com/mint-research).
 
-If you've built something similar or have improvements to suggest, I'd like to hear from you: [@sethlazar](https://twitter.com/sethlazar)
+Contributions and improvements welcome.
 
 ---
 

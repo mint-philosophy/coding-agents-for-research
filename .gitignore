@@ -1,2 +1,37 @@
-.cursor/
+# OS files
 .DS_Store
+Thumbs.db
+
+# API keys and secrets (NEVER commit these)
+.cursor/.api_keys.txt
+.env
+*.pem
+*.key
+
+# Session logs (personal data)
+sessions/active/*.json
+sessions/active/*.md
+sessions/completed/*.json
+sessions/completed/*.md
+!sessions/active/.gitkeep
+!sessions/completed/.gitkeep
+
+# Local repositories (these are clones, not part of this repo)
+local-repos/*
+!local-repos/.gitkeep
+
+# IDE/Editor settings (optional - uncomment if you want to ignore)
+# .vscode/
+# .idea/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.env/
+
+# Logs
+*.log

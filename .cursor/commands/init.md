@@ -279,11 +279,14 @@ Cursor v1.7+ supports: `beforeSubmitPrompt`, `beforeShellExecution`, `afterFileE
 
 | Skill | Description |
 |:---|:---|
-| canvas-sync | Use when syncing TODO.md with Slack canvases |
-| context-loading | Use when loading files for writing tasks |
+| batch-task-verification | Use when verifying completion of long-running batch tasks |
+| big-project-planning | Use when setting up large parallelizable projects (VISION/PLAN/EXECUTION) |
+| canvas-sync | Use when syncing markdown files with Slack canvases |
+| context-loading | Use when loading prior work for writing tasks to match voice/style |
+| cursor-claude-sync | Use when syncing commands between Cursor and Claude Code |
 | multi-agent-coordination | Use when planning/executing tasks spanning multiple sessions |
 | notion-tasks | Use when creating/updating Notion tasks |
-| project-setup | Use when creating new projects |
+| self-improvement | Use when looking for ideas to improve workflows, updating resources |
 | slack-posting | Use when posting to Slack or reading DMs |
 
 *(Add your own skills as you develop them)*
