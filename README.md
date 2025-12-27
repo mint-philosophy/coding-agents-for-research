@@ -172,6 +172,7 @@ Create `.cursor/commands/my-command.md` following the init.md structure.
 - [cursor.directory](https://cursor.directory/) — Community cursor rules collection
 - [Simon Willison on Claude Skills](https://simonwillison.net/2025/Oct/16/claude-skills/) — Skills pattern, "maybe bigger than MCP"
 - [Simon Willison: Async Code Research](https://simonwillison.net/2025/Nov/6/async-code-research/) — Using public repos with agents
+- [claude-code-transcripts](https://simonwillison.net/2025/Dec/25/claude-code-transcripts/) — Tool to convert sessions to shareable HTML
 - [simonw/research](https://github.com/simonw/research) — Example research repo for agent experiments
 
 *Found something useful? Add it here and credit the source.*
