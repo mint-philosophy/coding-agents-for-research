@@ -179,7 +179,7 @@ Create `.cursor/commands/my-command.md` following the init.md structure.
 
 ## About
 
-Created by [Seth Lazar](https://twitter.com/sethlazar), philosopher working on AI ethics at [MINT Lab](https://github.com/mint-research).
+Created by [Seth Lazar](https://twitter.com/sethlazar), philosopher working on AI alignment, governance and adaptation at [MINT Lab](https://github.com/mint-research).
 
 Contributions and improvements welcome.
 
