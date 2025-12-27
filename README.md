@@ -170,6 +170,9 @@ Create `.cursor/commands/my-command.md` following the init.md structure.
 ### Workflow Repos
 
 - [cursor.directory](https://cursor.directory/) — Community cursor rules collection
+- [Simon Willison on Claude Skills](https://simonwillison.net/2025/Oct/16/claude-skills/) — Skills pattern, "maybe bigger than MCP"
+- [Simon Willison: Async Code Research](https://simonwillison.net/2025/Nov/6/async-code-research/) — Using public repos with agents
+- [simonw/research](https://github.com/simonw/research) — Example research repo for agent experiments
 
 *Found something useful? Add it here and credit the source.*
 
