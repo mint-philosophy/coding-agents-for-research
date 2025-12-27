@@ -186,4 +186,4 @@ Rather than just share artefacts piecemeal I'm trying to set this up as a repo t
 
 A few things I'd still like to figure out. I want to set up automations where agents run certain tasks on a schedule—I'm sure it's feasible but haven't worked out the details. I'd like to find better solutions for the security question that don't sacrifice too much convenience. And I'm curious whether the research-at-scale workflow actually produces a net time savings once verification is complete. And I would like to figure out how to run multiple agents more effectively and efficiently. Going to spend some time with Claude Code's fork session command next.
 
-I'll be keeping this repo updated; new projects and results will be shared in the [updates](/updates.md).
+I'll be keeping this repo updated; new projects and results will be shared in the [updates](/docs/updates.md).
